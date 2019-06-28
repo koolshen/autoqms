@@ -1,31 +1,196 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@if (!User.Identity.IsAuthenticated)
+{
+
+    {
+        ViewBag.Title = "Home Page";
+    }
+    <div class="container body-content">
+        <div class="jumbotron">
+            <h1>Kvalitetstyring</h1>
+            <p class="lead">RAND Kvalitetstyring giver dig et nemt og overskueligt system til at oveholde IS09001:2015 standarden</p>
+        </div>
+    </div>
+}
+else
+{
+    <br>
+    <p class="text-center">
+        <h3 class="text-center">@ViewBag.h1</h3>
+        <h3 class="text-center">@ViewBag.h2</h3>
+        <h3 class="text-center">Kvalitetsstyring</h3>
+    </p>
+
+    <div class="row">
+        <div class="container">
+            <div class="row align-items-center" style="padding-top: 1rem;">
+                <div class="col">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kvalitetshåndbog</h5>
+                                <p class="card-text">Håndbogen beskriver alle detaljer i kvalitetstyringssystemet.</p>
+                                <a href="/KvalitetsSystem/HTML/1" class="btn btn-primary">Gå til håndbog</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Visioner og strategi</h5>
+                                <p class="card-text">Din strategi vises her..</p>
+                                <a href="/KvalitetsSystem/HTML/1#strategi" class="btn btn-primary">Gå til strategi</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kvalitetspolitik</h5>
+                                <p class="card-text">Din politik vises her.</p>
+                                <a href="/KvalitetsSystem/HTML/1#politik" class="btn btn-primary">Gå til politik</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kvalitetsmål</h5>
+                                <p class="card-text">Mål der skal opnåes</p>
+                                <a href="/KvalitetsSystem/HTML/1#kvalitetesmål" class="btn btn-primary">Gå til mål</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center" style="padding-top: 1rem;">
+                <div class="col">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kerneprocesser</h5>
+                                <p class="card-text">Her kan du se dine processer</p>
+                                <a href="/KvalitetsSystem/Document/1" class="btn btn-primary">Gå til processer</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">PDCA</h5>
+                                <p class="card-text">PDCA vises her</p>
+                                <a href="/KvalitetsSystem/Dokument/2" class="btn btn-primary">Gå til PDCA</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Risikoanalyse</h5>
+                                <p class="card-text">Hvad kan gå galt i din virksomhed.</p>
+                                <a href="/KvalitetsSystem/Dokument/3" class="btn btn-primary">Gå til analyse</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Gyldighedsområde</h5>
+                                <p class="card-text">Hvad dækker din kvalitetsstyring</p>
+                                <a href="/KvalitetsSystem/HTML/1#gyldighed" class="btn btn-primary">Gå til gyldighed</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center" style="padding-top: 1rem;">
+                <div class="col">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Organisationsdiagram</h5>
+                                <p class="card-text">Hvordan ser din virksomhed ud.</p>
+                                <a href="/KvalitetsSystem/Dokument/4" class="btn btn-primary">Gå til diagram</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kompetencer</h5>
+                                <p class="card-text">Overblik over kompetencer</p>
+                                <a href="/KvalitetsSystem/Dokument/5" class="btn btn-primary">Gå til kompetencer</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Auditplan</h5>
+                                <p class="card-text">Hvilke punkter skal gennemgåes</p>
+                                <a href="/KvalitetsSystem/Dokument/6" class="btn btn-primary">Gå til Auditplan</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Registreringer</h5>
+                                <p class="card-text">Hvad skal der registreres</p>
+                                <a href="/KvalitetsSystem/Dokument/7" class="btn btn-primary">Gå til registreringer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center" style="padding-top: 1rem;">
+                <div class="col">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kvalitetsstyringens omfang</h5>
+                                <p class="card-text">Hvor meget dækker styringen</p>
+                                <a href="/KvalitetsSystem/HTML/1#scope" class="btn btn-primary">Gå til omfang</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Leverandørvurdering</h5>
+                                <p class="card-text">Vurdér dine leverandører</p>
+                                <a href="/KvalitetsSystem/Dokument/14" class="btn btn-primary">Gå til vurdering</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Vejledning om syn af køretøjer</h5>
+                                <p class="card-text">Link til Færdselsstyrelsen vejleding</p>
+                                <a href="http://www.fstyr.dk/DA/Krav-til-koretojer/Regler-om-koretojer/Vejledning-om-syn-af-koretojer.aspx" target="_blank" class="btn btn-primary">Gå til vejledning</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">ISO Procedure</h5>
+                                <p class="card-text">Diagram over procedure</p>
+                                <a href="/KvalitetsSystem/Dokument/9" class="btn btn-primary">Gå til procedure</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center" style="padding-top: 1rem;">
+                <div class="col">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Afvigelsesrapport</h5>
+                                <a href="/KvalitetsSystem/Dokument/10" class="btn btn-primary">Gå til omfang</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Observationsrapport</h5>
+                                <a href="/KvalitetsSystem/Dokument/11" class="btn btn-primary">Gå til standarden</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Nødsynsrapport</h5>
+                                <a href="/KvalitetsSystem/Dokument/12" class="btn btn-primary">Gå til vejledning</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kundetilfredsheds skema</h5>
+                                <a href="/KvalitetsSystem/Dokument/13" class="btn btn-primary">Gå til procedure</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

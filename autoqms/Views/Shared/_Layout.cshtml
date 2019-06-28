@@ -9,31 +9,100 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+
     <div class="container body-content">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button> <a href="./" class="navbar-brand">Kvalitet</a>
+                <div class="navbar-collapse collapse">
+                    <ul id="LoggedInMenu" class="navbar-nav mr-auto"></ul>
+                    <ul class="navbar-nav">
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </nav>
+
+        }
+        else
+        {
+            <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button> <a href="~/" class="navbar-brand">Kvalitet</a>
+                <div class="navbar-collapse collapse">
+                    <ul id="LoggedInMenu" class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="/" class="nav-link">Oversigt</a></li>
+                        <li class="nav-item"><a href="~/KvalitetsSystem/HTML/1" class="nav-link">Kvalitetshåndbogen</a></li>
+                        <li class="nav-item"><a href="~/KvalitetsSystem/Dokument/3" class="nav-link">Risikoanalyse</a></li>
+                        <li class="nav-item"><a href="~/KvalitetsSystem/Dokument/6" class="nav-link">Auditplan</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" "~=" " about" ="" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Virksomheden
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/4">Organisationsdiagram</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/1">Kerneprocesser</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/5">Kompetencer</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dokumenter
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/10">Afvigelsesrapport</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/11">Observationsrapport</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/12">Nødsynsrapport</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/13">Kundetilfredshedsskema</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ISO 9001:2015
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/7">Registreringer</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/2">PDCA</a>
+                                <a class="dropdown-item" href="~/KvalitetsSystem/Dokument/9">ISO Procedure</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li id="LoggedInStatus" class="nav-item dropdown">
+                            @Html.Partial("_LoginPartial")
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+        }
+
+        
+        @if (User.Identity.Name == "agdriveinbilsyn@yahoo.dk")
+        {
+            <div style="text-align: center; padding: 20px">
+                <h1>AG DRIVE-IN BILSYN ApS </h1>
+                <h1>CVR: 35520376 </h1>
+                <h1>Kvalitetsstyring </h1>
+
+            </div>
+        }
+
         @RenderBody()
+
+        
+        @if (User.Identity.Name == "agdriveinbilsyn@yahoo.dk")
+        {
+            <div style="text-align: center;padding: 20px">
+                <h6>RAND Consult kvalitetsstyring til bilsynshaller copyright©, skal systemet udvides og adresser tilføjes skal dette udføres igennem RAND Consult eller en godkendt partner.  </h6>
+
+            </div>
+        }
+
+
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Kvalitetsstyring til bilsynshaller</p>
         </footer>
     </div>
 
