@@ -311,6 +311,8 @@
     <Content Include="Content\NEM\Proces_flow.pdf" />
     <Content Include="Content\NEM\Risiko-analyse-Bilsyn.pdf" />
     <Content Include="Content\NEM\_ISO registreringer.pdf" />
+    <Content Include="Content\KAS\Kompetencematrix.xlsx" />
+    <Content Include="Content\NEM\Kompetencematrix.xlsx" />
     <None Include="Properties\PublishProfiles\autoqms - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\autoqms - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

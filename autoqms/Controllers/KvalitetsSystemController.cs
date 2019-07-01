@@ -50,47 +50,73 @@ namespace autoqms.Controllers
                 case 1:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=1";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 2:
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 3:
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 4:
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 5:
                     ViewData["file"] = string.Format(baseUrld, "Proces_flow.pdf");
+                    ViewData["download_link"] = "Proces_flow.pdf";
                     break;
                 case 6:
                     ViewData["file"] = string.Format(baseUrld, "ISO_process.pdf");
+                    ViewData["download_link"] = "ISO_process.pdf";
                     break;
                 case 7:
                     ViewData["file"] = string.Format(baseUrld, "Risiko-analyse-Bilsyn.pdf");
+                    ViewData["download_link"] = "Risiko-analyse-Bilsyn.pdf";
                     break;
                 case 8:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=4";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 9:
                     ViewData["file"] = string.Format(baseUrld, "Org.Diagram.pdf");
+                    ViewData["download_link"] = "Org.Diagram.pdf";
                     break;
                 case 10:
-                    ViewData["file"] = string.Format(baseUrld, "Kompetencematrix.pdf");
+                    if (User.Identity.Name == "KAS-qms-num" || User.Identity.Name == "NEM-qms-mer")
+                    {
+                        ViewData["file"] = string.Format(baseUrld, "Kompetencematrix.xlsx");
+                        ViewData["download_link"] = "Kompetencematrix.pdf";
+                    }
+                    else
+                    {
+                        ViewData["file"] = string.Format(baseUrld, "Kompetencematrix.pdf");
+                        ViewData["download_link"] = "Kompetencematrix.pdf";
+                    }
                     break;
                 case 11:
                     ViewData["file"] = string.Format(baseUrld, "Auditplan.pdf");
+                    ViewData["download_link"] = "Auditplan.pdf";
+
                     break;
                 case 12:
                     ViewData["file"] = string.Format(baseUrld, "_ISO_registreringer.pdf");
+                    ViewData["download_link"] = "ISO_process.pdf";
+
                     break;
                 case 13:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=4";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+
                     break;
                 case 14:
                     ViewData["file"] = string.Format(baseUrld, "LeverandЫr_vurdering.pdf");
+                    ViewData["download_link"] = "LeverandЫr_vurdering.pdf";
+
                     break;
                 case 15:
                     baseUrld = "https://www.fstyr.dk/DA/Krav-til-koretojer/Regler-om-koretojer/Vejledning-om-syn-af-koretojer.aspx";
@@ -98,24 +124,40 @@ namespace autoqms.Controllers
                     break;
                 case 16:
                     ViewData["file"] = string.Format(baseUrld, "ISO_process.pdf");
+                    ViewData["download_link"] = "ISO_process.pdf";
+
                     break;
                 case 17:
                     ViewData["file"] = string.Format(baseUrld, "Afvigelsesrapport.pdf");
+                    ViewData["download_link"] = "Afvigelsesrapport.pdf";
+
                     break;
                 case 18:
                     ViewData["file"] = string.Format(baseUrld, "Observationsrapport.pdf");
+                    ViewData["download_link"] = "Observationsrapport.pdf";
+
                     break;
                 case 19:
                     ViewData["file"] = string.Format(baseUrld, "NЫdsynsrapport.pdf");
+                    ViewData["download_link"] = "NЫdsynsrapport.pdf";
+
                     break;
                 case 20:
                     ViewData["file"] = string.Format(baseUrld, "KundetilfredshedsmЖling.pdf");
+                    ViewData["download_link"] = "KundetilfredshedsmЖling.pdf";
+
                     break;
                 default:
                     break;
             }
 
             return View(id);
+        }
+
+        [HttpGet]
+        public ActionResult GetFile(string filename)
+        {
+            return File("/Content/" + CompaniesDictionary[User.Identity.Name] + "/"+ Request["filename"], "application /pdf", Request["filename"]);
         }
     }
 }
