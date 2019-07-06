@@ -53,14 +53,16 @@ namespace autoqms.Controllers
                     ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 2:
+                    baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=2";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 3:
+                    baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=6";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
                     ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
                 case 4:
+                    baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=8";
                     ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
                     ViewData["download_link"] = "kvalitetsmanual.pdf";
                     break;
