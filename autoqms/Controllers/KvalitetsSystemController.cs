@@ -18,7 +18,7 @@ namespace autoqms.Controllers
             { "STE-qms-vej","STE" },
             { "KAS-qms-num","KAS" },
             { "NEM-qms-mer","NEM" },
-
+            { "NSB-qms-nul","NSB" }
         };
 
 
@@ -106,7 +106,7 @@ namespace autoqms.Controllers
                     break;
                 case 12:
                     ViewData["file"] = string.Format(baseUrld, "_ISO_registreringer.pdf");
-                    ViewData["download_link"] = "ISO_process.pdf";
+                    ViewData["download_link"] = "_ISO_registreringer.pdf";
 
                     break;
                 case 13:

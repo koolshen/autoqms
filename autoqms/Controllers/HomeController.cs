@@ -58,7 +58,9 @@ namespace autoqms.Controllers
                 case "nem-qms-mer":
                     result = "BILSYN Marslev ApS";
                     break;
-
+                case "nsb-qms-nul":
+                    result = "Nordsjællands Bilsyn ApS";
+                    break;
             }
 
             return result;
@@ -90,8 +92,9 @@ namespace autoqms.Controllers
                 case "nem-qms-mer":
                     result = "35533745";
                     break;
-
-
+                case "nsb-qms-nul":
+                    result = "33499426";
+                    break;
             }
 
             return result;
