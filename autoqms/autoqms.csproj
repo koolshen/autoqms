@@ -310,7 +310,7 @@
     <Content Include="Content\NEM\Org.Diagram.pdf" />
     <Content Include="Content\NEM\Proces_flow.pdf" />
     <Content Include="Content\NEM\Risiko-analyse-Bilsyn.pdf" />
-    <Content Include="Content\NEM\_ISO registreringer.pdf" />
+    <Content Include="Content\NEM\_ISO_registreringer.pdf" />
     <Content Include="Content\KAS\Kompetencematrix.xlsx" />
     <Content Include="Content\NEM\Kompetencematrix.xlsx" />
     <Content Include="Content\NSB\kvalitetsmanual.pdf" />
@@ -325,6 +325,7 @@
     <Content Include="Content\NSB\NЫdsynsrapport.pdf" />
     <Content Include="Content\NSB\KundetilfredshedsmЖling.pdf" />
     <Content Include="Content\NSB\Org.Diagram.pdf" />
+    <Content Include="Content\NSB\_ISO_registreringer.pdf" />
     <None Include="Properties\PublishProfiles\autoqms - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\autoqms - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
