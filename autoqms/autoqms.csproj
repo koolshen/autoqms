@@ -325,6 +325,7 @@
     <Content Include="Content\NSB\NЫdsynsrapport.pdf" />
     <Content Include="Content\NSB\KundetilfredshedsmЖling.pdf" />
     <Content Include="Content\NSB\Org.Diagram.pdf" />
+    <Content Include="Content\NSB\_ISO registreringer.pdf" />
     <None Include="Properties\PublishProfiles\autoqms - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\autoqms - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

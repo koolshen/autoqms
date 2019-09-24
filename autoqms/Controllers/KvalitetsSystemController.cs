@@ -44,27 +44,28 @@ namespace autoqms.Controllers
         {
             string baseUrlShared = "https://docs.google.com/gview?url=http://autoqms.gear.host/Content/Shared/{0}&embedded=true";
             string baseUrld = "https://docs.google.com/gview?url=http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}&embedded=true";
+            var kvalitetManualUrl = "kvalitetsmanual.pdf";
 
             switch (id)
             {
                 case 1:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=1";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
+                    ViewData["download_link"] = kvalitetManualUrl;
                     break;
                 case 2:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=2";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
                     break;
                 case 3:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=6";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
+                    ViewData["download_link"] = kvalitetManualUrl;
                     break;
                 case 4:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=8";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
+                    ViewData["download_link"] = kvalitetManualUrl;
                     break;
                 case 5:
                     ViewData["file"] = string.Format(baseUrld, "Proces_flow.pdf");
@@ -80,8 +81,8 @@ namespace autoqms.Controllers
                     break;
                 case 8:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=4";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
+                    ViewData["download_link"] = kvalitetManualUrl;
                     break;
                 case 9:
                     ViewData["file"] = string.Format(baseUrld, "Org.Diagram.pdf");
@@ -111,8 +112,8 @@ namespace autoqms.Controllers
                     break;
                 case 13:
                     baseUrld = "http://autoqms.gear.host/Content/" + CompaniesDictionary[User.Identity.Name] + "/{0}#page=4";
-                    ViewData["file"] = string.Format(baseUrld, "kvalitetsmanual.pdf");
-                    ViewData["download_link"] = "kvalitetsmanual.pdf";
+                    ViewData["file"] = string.Format(baseUrld, kvalitetManualUrl);
+                    ViewData["download_link"] = kvalitetManualUrl;
 
                     break;
                 case 14:
