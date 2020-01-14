@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace autoqms.Controllers
@@ -18,7 +15,8 @@ namespace autoqms.Controllers
             { "STE-qms-vej","STE" },
             { "KAS-qms-num","KAS" },
             { "NEM-qms-mer","NEM" },
-            { "NSB-qms-nul","NSB" }
+            { "NSB-qms-nul","NSB" },
+            { "Aal-qms-bor","AAL" }
         };
 
 
@@ -160,7 +158,7 @@ namespace autoqms.Controllers
         [HttpGet]
         public ActionResult GetFile(string filename)
         {
-            return File("/Content/" + CompaniesDictionary[User.Identity.Name] + "/"+ Request["filename"], "application /pdf", Request["filename"]);
+            return File("/Content/" + CompaniesDictionary[User.Identity.Name] + "/" + Request["filename"], "application /pdf", Request["filename"]);
         }
     }
 }
