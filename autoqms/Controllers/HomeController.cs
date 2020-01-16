@@ -61,6 +61,12 @@ namespace autoqms.Controllers
                 case "nsb-qms-nul":
                     result = "Nordsjællands Bilsyn ApS";
                     break;
+                case "aal-qms-bor":
+                    result = "Aalborg bilsyn v/Thomas Rasmussen";
+                    break;
+                case "hob-qms-bro":
+                    result = "Hobro Bilsyn /Anders Berthelsen";
+                    break;
             }
 
             return result;
@@ -94,6 +100,12 @@ namespace autoqms.Controllers
                     break;
                 case "nsb-qms-nul":
                     result = "33499426";
+                    break;
+                case "aal-qms-bor":
+                    result = "28261969";
+                    break;
+                case "hob-qms-bro":
+                    result = "34114145";
                     break;
             }
 
