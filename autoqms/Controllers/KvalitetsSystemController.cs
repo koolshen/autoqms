@@ -17,7 +17,8 @@ namespace autoqms.Controllers
             { "NEM-qms-mer","NEM" },
             { "NSB-qms-nul","NSB" },
             { "Aal-qms-bor","AAL" },
-            { "Hob-qms-bro","HOB" }
+            { "Hob-qms-bro","HOB" },
+            { "Bor-qms-ups","BOR" }
         };
 
 

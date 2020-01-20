@@ -107,6 +107,9 @@ namespace autoqms.Controllers
                 case "hob-qms-bro":
                     result = "34114145";
                     break;
+                case "bor-qms-ups":
+                    result = "38597590";
+                    break;
             }
 
             return result;
