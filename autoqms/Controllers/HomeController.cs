@@ -67,6 +67,9 @@ namespace autoqms.Controllers
                 case "hob-qms-bro":
                     result = "Hobro Bilsyn /Anders Berthelsen";
                     break;
+                case "mas-qms-tas":
+                    result = "Master Bilsyn Vallensbæk ApS";
+                    break;
             }
 
             return result;
@@ -109,6 +112,9 @@ namespace autoqms.Controllers
                     break;
                 case "bor-qms-ups":
                     result = "38597590";
+                    break;
+                case "MaS-qms-Tas":
+                    result = "31608430";
                     break;
             }
 
