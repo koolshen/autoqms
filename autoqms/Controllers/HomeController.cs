@@ -113,7 +113,7 @@ namespace autoqms.Controllers
                 case "bor-qms-ups":
                     result = "38597590";
                     break;
-                case "MaS-qms-Tas":
+                case "mas-qms-tas":
                     result = "31608430";
                     break;
             }
