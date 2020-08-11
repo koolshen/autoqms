@@ -70,6 +70,9 @@ namespace autoqms.Controllers
                 case "mas-qms-tas":
                     result = "Master Bilsyn Vallensbæk ApS";
                     break;
+                case "dan-qms-stu":
+                    result = "Dansk Bilsyn ApS";
+                    break;
             }
 
             return result;
@@ -115,6 +118,9 @@ namespace autoqms.Controllers
                     break;
                 case "mas-qms-tas":
                     result = "31608430";
+                    break;
+                case "dan-qms-stu":
+                    result = "41554495";
                     break;
             }
 

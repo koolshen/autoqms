@@ -19,7 +19,8 @@ namespace autoqms.Controllers
             { "Aal-qms-bor","AAL" },
             { "Hob-qms-bro","HOB" },
             { "Bor-qms-ups","BOR" },
-            { "MaS-qms-Tas","MAS" }
+            { "MaS-qms-Tas","MAS" },
+            { "DAN-qms-stu","DAN" }
         };
 
 
