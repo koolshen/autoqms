@@ -73,6 +73,9 @@ namespace autoqms.Controllers
                 case "dan-qms-stu":
                     result = "Dansk Bilsyn ApS";
                     break;
+                case "Kvi-qms-ups":
+                    result = "Kvistgård Bilsyn";
+                    break;
             }
 
             return result;
@@ -121,6 +124,9 @@ namespace autoqms.Controllers
                     break;
                 case "dan-qms-stu":
                     result = "41554495";
+                    break;
+                case "kvi-qms-ups":
+                    result = "31961416";
                     break;
             }
 
