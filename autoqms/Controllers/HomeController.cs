@@ -34,7 +34,7 @@ namespace autoqms.Controllers
 
         private string GetCurrentHeader1()
         {
-            var result = "";
+            var result = string.Empty;
             switch (User.Identity.Name.ToLower())
             {
                 case "lar-qms-stu":
@@ -73,9 +73,11 @@ namespace autoqms.Controllers
                 case "dan-qms-stu":
                     result = "Dansk Bilsyn ApS";
                     break;
-                case "Kvi-qms-ups":
+                case "kvi-qms-ups":
                     result = "Kvistgård Bilsyn";
                     break;
+                default:
+                    throw new ApplicationException("No Company Header!");
             }
 
             return result;
