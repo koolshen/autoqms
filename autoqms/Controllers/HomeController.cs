@@ -76,8 +76,6 @@ namespace autoqms.Controllers
                 case "kvi-qms-ups":
                     result = "Kvistgård Bilsyn";
                     break;
-                default:
-                    throw new ApplicationException("No Company Header!");
             }
 
             return result;
